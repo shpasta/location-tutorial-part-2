@@ -21,20 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.locationManager = [[CLLocationManager alloc] init];
-    
-    // Location tracker accuracy will no affect to
-//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-    
-    // Distance filter
-//    self.locationManager.distanceFilter = 50.f;
     
     // Assign location tracker delegate
     self.locationManager.delegate = self;
-    
-    // This setup pauses location manager if location wasn't changed
-//    [self.locationManager setPausesLocationUpdatesAutomatically:YES];
     
     // For iOS9 we have to call this method if we want to receive location updates in background mode
     if([self.locationManager respondsToSelector:@selector(allowsBackgroundLocationUpdates)]){
